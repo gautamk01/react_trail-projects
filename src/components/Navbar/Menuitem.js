@@ -1,5 +1,5 @@
 export const menuitems = [{
-    title: 'home',
+    title: 'Home',
     url: '#',
     cname: 'nav-link'
 },
@@ -19,8 +19,10 @@ export const menuitems = [{
     cname: 'nav-link'
 },
 {
-    title: 'Campus',
+    title: 'Exam Result',
     url: '#',
-    cname: 'nav-link-mobil'
-}];
+    cname: 'nav-link'
+}
+
+];
 
