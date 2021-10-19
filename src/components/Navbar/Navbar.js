@@ -1,16 +1,19 @@
 import "./Navbar.css";
 import React, { useState } from 'react';
 import { menuitems } from "./Menuitem";
-console.log(menuitems);
 
-function Navbar() {
+// console.log(menuitems);
+
+function Navbar(props) {
     const [clicked, final] = useState(false);
 
     function changerfunction() {
         final(!clicked);
-
-
+        props.change(!clicked);
     }
+
+
+
     return (
 
         <nav className="Navbaritems">
