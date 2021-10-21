@@ -25,9 +25,9 @@ function Slider(props) {
         }
     }
 
-
-
-
+    const movepho = idx => {
+        setsliderindex(idx);
+    }
     return (
         <div className={props.onchange ? "h" : "container-slider "}>
             {dataSlider.map((obj, index) => {
@@ -40,6 +40,11 @@ function Slider(props) {
             })}
             <BtnSlider move={nextslide} direction={"next"} />
             <BtnSlider move={prevslide} direction={"prev"} />
+            <div className="container-dots">
+                {
+                    [1, 2, 3, 4, 5].map((item, index) => (
+                        <div key={item} onClick={() => movepho(index + 1)} className={silderindex === (index + 1) ? "dot active" : "dot"}></div>))
+                }</div>
         </div >
     );
 }
